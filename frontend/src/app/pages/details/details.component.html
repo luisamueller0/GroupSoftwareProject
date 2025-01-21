@@ -1,0 +1,129 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class = "page-container">
+  <app-back-button></app-back-button>
+
+  <div class="scrollable-container">
+
+    <h2 class="backbtn">{{event?.title}}</h2>
+
+    <div class="distance">
+
+    <img class='picture' src={{src}}>
+    <p *ngIf="isOver" class= "over">Event ist bereits vorbei !</p>
+    <div class="distance2">
+        <div *ngIf="sameDate">
+            <mat-icon class="icons" >today</mat-icon> {{event?.start_date}} <br>
+        </div>
+        <div *ngIf="!sameDate">
+            <mat-icon class="icons" >today</mat-icon> {{event?.start_date}} - {{event?.end_date}} <br>
+            <span *ngIf="isOver" class = "testo">&#10071;Event ist bereits vorbei&#10071;</span><br>
+        </div>
+
+
+      <mat-icon class="icons">local_offer</mat-icon>
+      {{event?.price}}
+
+      <div *ngIf="hasChildPrice">
+          <mat-icon class="icons">local_offer</mat-icon>
+          {{event?.price_child}} (Kinder, 6-12 Jahre)
+      </div>
+
+      <div *ngIf="hasSeniorPrice">
+          <mat-icon class="icons">local_offer</mat-icon>
+          {{event?.price_senior}} (Senioren, ab 60 Jahren)
+      </div>
+
+      <div *ngIf="hasStudentPrice">
+          <mat-icon class="icons">local_offer</mat-icon>
+          {{event?.price_student}} (Schüler & Studierende)
+      </div>
+
+    </div>
+
+    <!-- Buttons for buying/adding to shopping card -->
+    <div *ngIf="!isOver" class = "buttons">
+
+      <button class="btn"
+      mat-flat-button
+      color="accent"
+      (click)="bestellen(false)">
+        Direkt Kaufen
+      </button>
+
+      <button class="btn"
+      mat-flat-button
+      color="accent"
+      (click)="bestellen(true)">
+        Zum Warenkorb hinzufügen <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+
+    </div>
+
+    <!-- The average of the ratings -->
+    <div class="stars-container" *ngIf="moreThan6 && isOver">
+        <p class="startext">{{average}}</p>
+        <div *ngFor="let starFill of starsFill" class="star gold">
+            <i [ngClass]="{
+                'fa-regular' : starFill < 0.5,
+                'fa-solid' : starFill >= 0.5,
+                'fa-star-half-stroke' : starFill === 0.5,
+                'fa-star' : starFill !== 0.5
+              }"></i>
+        </div>
+
+        <p class = "startext">({{amount}})</p>
+    </div>
+
+
+    <hr>
+
+    <div class="d-description" [innerHTML]="event?.description_html"></div>
+
+    <hr>
+
+    <p class = "d-text">
+      Standort auf der Insel
+    </p>
+
+    <div class="map"
+     leaflet
+     [leafletOptions]="options"
+     [leafletLayers]="layers"
+     [leafletCenter]="coords">
+    </div>
+
+    <!-- "Bewerten" button and ratings -->
+    <div *ngIf="isOver">
+        <hr class="distance3">
+
+        <div class="rate" *ngIf="canEvaluate && !hasEvaluated">
+            <button class="light-btn" mat-flat-button color="accent" (click)="openPopup()">Event bewerten</button>
+        </div>
+
+        <app-rating-popup *ngIf="event" [title]="event.title" [start_date]="event.start_date" [end_date]="event.end_date"
+            [event_id]="event.id" [refresh]="false" [(isBewertenVisible)]="isBewertenVisible"></app-rating-popup>
+
+        <div *ngIf="anyEvaluation">
+            <div class="ratings" *ngFor="let item of threeRatings">
+                <app-single-rating [rating]='item'></app-single-rating>
+            </div>
+        </div>
+
+        <div *ngIf="moreThanThree">
+            <div class="center" *ngIf="showMehrAnzeigen">
+                <button class="more-button" (click)="showMore()">Mehr anzeigen</button>
+            </div>
+
+            <div class="center" *ngIf="showWenigerAnzeigen">
+                <button class="more-button" (click)="showLess()">weniger anzeigen</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>

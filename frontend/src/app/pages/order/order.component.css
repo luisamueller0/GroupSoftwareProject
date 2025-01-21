@@ -1,0 +1,148 @@
+
+
+.date{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  padding-left:5px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.button{
+  width:170px!important;
+  height:40px!important;
+}
+
+.width{
+  width:300px!important;
+  height:40px!important;
+}
+
+.spacing{
+  height: 10px;
+  position: sticky;
+}
+
+.costs{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  padding-top:20px;
+  margin-top: 20px;
+
+}
+
+.payment-container{
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+}
+
+.icon {
+  color: var(--mainau-beige);
+}
+
+.amount_button {
+  color:white;
+  width: 30px;
+  height: 30px
+}
+
+h2{
+  padding-left:5%;
+  padding-right:5%;
+}
+
+
+.grey{
+  background: rgba(248,236,212, 0.5) !important;
+  margin-bottom: 20px;
+}
+
+.scrollable-container{
+  padding:30px;
+}
+
+.table-bg {
+  color: white;
+  background-color: #0C4522;
+  outline: var(--mainau-beige) solid 4px;
+  outline-offset: 10px;
+  box-shadow: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.type{
+  width: 100%;
+}
+
+.line {
+  border-bottom: 2px solid var(--mainau-beige);
+  width: 94%;
+  margin-bottom: 10px;
+  position: absolute;
+}
+
+.ticket{
+  width: 45%
+}
+
+.price{
+  width: 10%;
+  text-align: right;
+}
+
+/* All stuff for pop-ups */
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 3px;
+  width: 10%;
+  z-index: 6;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  height: fit-content;
+  background-color: rgba(12, 69, 34, 0.8);
+  color: #fff;
+  text-align: center;
+  border: 3px inset var(--mainau-beige);
+  padding: 8px 0;
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

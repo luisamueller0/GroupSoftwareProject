@@ -1,0 +1,52 @@
+.ratingCard{
+  background-color: antiquewhite;
+  color: black;
+  margin-top: 3%;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container2{
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-icon {
+        transform: translateY(15%); /* Hier kannst du die Anzahl der Pixel anpassen */
+  }
+
+.notHelpfulGold{
+    transform: translateY(30%);
+    color: var(--mainau-gold);
+}
+
+.norHelpfulBlack{
+    transform: translateY(30%);
+}
+
+.helpfulGold{
+    color: var(--mainau-gold);
+}
+
+
+.starID{
+  margin-bottom: 0%;
+  margin-left: 2%;
+}
+
+.name{
+  font-size: medium;
+  margin-bottom: 0%;
+  margin-left: 2%;
+}
+
+.text{
+  font-size: small;
+  margin-left: 2%;
+}

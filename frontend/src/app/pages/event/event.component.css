@@ -1,0 +1,218 @@
+.search{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.scrollable-container{
+  padding-bottom:400px !important;
+}
+
+.style{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.abstand{
+  margin-top: 40px;
+}
+
+h3{
+  padding-bottom:0px!important;
+}
+
+.map-container {
+  width: 100%;
+  padding-top:0px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map {
+  height: 250px;
+  width: 92%;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 10px;
+  border: 2px static black;
+}
+
+.map-title {
+  margin-left: 3px;
+  color:#F7ECD5;
+  font-weight:600;
+  margin-bottom: -4px;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: left;
+}
+
+
+.slider-container {
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-label {
+  margin-left: 3px;
+  margin-bottom: -4px;
+
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mat-slider ::ng-deep {
+  flex: 1;
+}
+.popup-container {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  width: 90%;
+  height:auto!important;
+  transform: translateX(-50%);
+  background-color: rgba(12,69,34, 0.93)!important;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.slider-wrapper {
+
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  text-align:center;
+
+  background-color:  rgba(247, 236, 213, 0.7);
+  border-radius: 5px;
+  background: rgba(247, 236, 213, 0.7);
+  border-width: 2px;
+    color: var(--background);
+    font-size: 15px;
+    margin: 0;
+}
+
+.slider-text {
+  font-size: 15px;
+  width: 3em;
+  margin-top:12px;
+  margin-bottom: 12px;
+}
+
+.min{
+  margin-right:3px;
+  margin-left: 6px;
+}
+
+.max{
+  margin-left: 3px;
+  margin-right:6px;
+}
+
+
+.scontainer{
+  max-height: 100%;
+  height: 100%;
+  padding-top:0px!important;
+  padding: 20px;
+}
+
+
+.input {
+  width: 90%;
+  color:#F7ECD5;
+  border-radius: 5px;
+  border: 2px static black;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 3px;;
+}
+
+.dropbtn {
+  background: var(--mainau-light);
+  color: var(--background);
+  border:none;
+  border-radius: 5px;
+  margin-left: 6px;
+  margin-bottom: 10px;
+  margin-top:10px;
+  height: 25px;
+  margin-right: 40%;
+  font-size: 14px;
+}
+.marked {
+  background: var(--accent)!important;
+  color: var(--foreground)!important;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+
+
+.dropdown-content {
+  position: absolute;
+  overflow: hidden;
+margin-top: 0px;
+  left: 50%;
+  width: 90%;
+  height: 60%;
+  transform: translateX(-50%);
+  z-index: 9999;
+   background-color: rgba(12,69,34, 0.93);
+  color: #0C4522;
+  padding: 10px;
+  border: 1px solid #F7ECD5;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow:hidden;
+}
+
+
+.close{
+  right: 20px;
+}
+.btn{
+  background-color: rgba(247, 236, 213, 1);
+  color: #0C4522;
+  border-radius: 5px;
+  border: 1px solid black;
+  position:fixed;
+  font-size: 14px;
+  height: 25px;
+  top: 20px;
+  text-align: center;
+  width:100px;
+}
+.reset {
+  left: 20px;
+}
+
+.center{
+  text-align: center;
+}
+
+.up{
+  position: fixed;
+  padding: 30px;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.filter{
+  font-size:15px;
+  font-weight:500;
+  color:var(--mainau-beige);
+  margin-left: 6px;
+
+}

@@ -1,0 +1,32 @@
+<div class="ratingCard">
+
+  <div class="flex-container">
+
+    <p class="starID" [innerHTML]="this.stars" [style.color]="goldStar"></p>
+
+    <div *ngIf="stayAnonym">
+      <p class="name">
+          Anonym
+      </p>
+    </div>
+
+    <div *ngIf="!stayAnonym">
+      <p class="name">
+      {{rating?.firstname}} {{rating?.lastname}}
+      </p>
+    </div>
+
+    <p class="text">{{rating?.description}} </p>
+
+    <div class="flex-container2">
+      <div (click)="upVote($event)">
+          {{likes}} <mat-icon [ngClass]="currentHelpful ? 'helpfulGold' : 'helpfulBlack'">thumb_up_alt</mat-icon> <span> hilfreich</span>
+      </div>
+      <div (click)="downVote($event)">
+          {{dislikes}} <mat-icon [ngClass]="currentHelpful ? 'notHelpfulBlack' : (currentHelpful === false ? 'notHelpfulGold' : 'notHelpfulBlack')">thumb_down_alt</mat-icon> <span> nicht hilfreich</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>

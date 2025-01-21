@@ -1,0 +1,222 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+
+    /* Mittels dem -- Prefix können wir in CSS auch Variablen definieren, wie z.B. die Hauptfarben der App */
+    /* Da die 'styles.css' global gültig ist, können die hier definierten Variablen in allen Komponenten verwendet werden */
+    --mainau-green: #0C4522;
+    --mainau-gold: #A47D11;
+    --mainau-beige: #F7ECD5;
+    --mainau-light: rgba(247, 236, 213, 0.7);
+    --mainau-lightgreen: #4f7c60;
+
+    /* Die definierten Variablen können dann durch die "var()" Funktion eingesetzt werden */
+    --foreground: var(--mainau-beige);
+    --background: var(--mainau-green);
+    --accent: #117B84;
+    --accent-light: #1ab6c4;
+
+    background: var(--background);
+    color: var(--foreground);
+}
+.errormsg{
+  color: red;
+  font-weight: 600;
+  text-align: center;
+  font-size: 19px;
+  padding-bottom:5px;
+  padding-top: 5px;
+}
+
+
+/*
+for edits:
+*/
+.buttons{
+  text-align: center;
+}
+.space{
+  margin-bottom: 10px;
+}
+.group{
+  line-height: 2.0;
+  width: 100%;
+  margin-top: 30px;
+}
+.successmsg{
+  color:rgb(28, 160, 79)!important;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:15px;
+  margin-top: 20px;
+
+}
+
+
+.street{
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* linker Input doppelt so groß*/
+  grid-gap: 10px;
+}
+
+.cancel{
+  color:rgba(247, 236, 213, 1);
+  border-radius: 5px;
+  color: var(--background);
+}
+.rowbuttons{
+  padding-top: 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.save {
+  color:rgba(247, 236, 213, 1)  !important;
+  margin-bottom: 20px;
+}
+.button{
+  line-height: 21px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-size: 13pt;
+  font-weight: 700;
+  padding: 5px;
+  width: 150px;
+  height: 35px;
+  }
+
+.delete {
+  color: rgba(247, 236, 213, 1) !important;
+  background: rgb(237, 53, 53) !important;
+  border-color: rgb(237, 53, 53) !important;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+.x-btn {
+  position: absolute;
+top: 10px;
+  right: 10px;
+
+
+  padding: 20px;
+
+  border: none;
+  color:#F7ECD5;
+  background: none;
+
+  transform: scale(1.7);
+}
+/**/
+
+.page-container {
+    height: 100%;
+    margin-top: 30px;
+    word-break: normal;
+}
+
+.scrollable-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+
+  /* Extra Padding für die Navigationsbar */
+  padding-bottom: 200px;
+
+}
+
+.scrollable-container2 {
+  overflow-x: hidden;
+  overflow-y: auto!important;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+
+  /* Extra Padding für die Navigationsbar */
+  padding-bottom: 5px;
+
+}
+/* Styles für die Attraktionen und Events Details Seiten*/
+.d-picture {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.d-description{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.d-text{
+  font-weight:550;
+  padding-top:15px;
+  color: var(--foreground)!important;
+}
+
+.d-map {
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  border-radius: 12px;
+}
+
+
+/* Das Design benutzt den 'outlined' Icon theme */
+.mat-icon {
+    font-family: 'Material Icons Outlined';
+}
+
+
+a {
+    color: var(--foreground);
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+
+}
+h2 {
+  font-weight: 650!important;
+  text-align: center!important;
+  width: 100%;
+  font-size: 28px!important;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+.backbtn{ /* If h2 header has back button above, less distance needed*/
+  padding-top: 0px!important; /*Distance already made through down in back button*/
+}
+.x{
+  padding-top: 25px!important;
+}
+h3 {
+  color:var(--foreground);
+  font-weight: 450!important;
+  width: 100%;
+  font-size: 20px!important;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,31 @@
+<div class="start">
+    <h1 class="title">Island-Explorer</h1>
+    <img src="/assets/start.jpg" />
+</div>
+
+<div class="container scrollable-container">
+
+  <app-user-input label="Email" [invalid]="!bools[0]" msg = {{msgs[0]}} [(text)] = 'email' (change)="clearEmail()"></app-user-input>
+  <app-user-input (enterKeyPressed)="login()" [invalid]="!bools[1]" msg = {{msgs[1]}} label="Passwort" type="password" [(text)] = 'password'></app-user-input>
+
+  <button class="login-btn" mat-flat-button color="accent" (click)="login()">Login</button>
+
+  <div class="deleted" *ngIf="justdeleted">
+    Profil wurde gelöscht.
+  </div>
+
+
+  <div class="errormsg" *ngIf="errorMessage !== ''">
+      {{errorMessage}}
+  </div>
+
+  <div class="info">
+      Noch kein Konto?
+      <a routerLink="/register">Hier registrieren</a>
+  </div>
+
+  <div class="info about">
+      Mehr Informationen <a routerLink="/about">über uns</a>
+  </div>
+</div>
+

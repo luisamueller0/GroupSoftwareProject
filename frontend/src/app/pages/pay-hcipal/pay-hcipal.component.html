@@ -1,0 +1,27 @@
+<div class="page-container  scrollable-container">
+
+  <app-payment-header></app-payment-header>
+
+  <div class="square">
+    <div class="picture">
+        <img class="picture" src="/assets/payment/hciPal.png">
+    </div>
+</div>
+  <div class="container">
+    <div class = "group">
+      <app-user-input  msg = {{msgs[0]}} [invalid]="!bools[0]" label="Email" [(text)] = "email"></app-user-input>
+      <app-user-input  (enterKeyPressed)="checkInput()" msg = {{msgs[1]}} [invalid]="!bools[1]" label="Passwort" type="password" [(text)] = "password"></app-user-input>
+    </div>
+    <div class="errormsg" [ngStyle]="{'height': outputVisible ? '60px' : '0px' }"> {{outcome}} </div>
+    <div class="spinner" [ngStyle]="{'height': !outputVisible ? '60px' : '0px' }">
+      <app-loading-spinner [loading]="loading" [invisible]="outputVisible"></app-loading-spinner>
+    </div>
+    <div class="rowbuttons">
+      <button class="cancel button" mat-flat-button color="primary" (click)="cancel()"> Abbrechen </button>
+      <button class="save button" mat-flat-button color="accent" (click) = "checkInput()" > Jetzt Kaufen</button>
+     </div>
+</div>
+</div>
+
+
+

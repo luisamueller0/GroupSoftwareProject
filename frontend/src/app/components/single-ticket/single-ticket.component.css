@@ -1,0 +1,102 @@
+.ticket{
+  background-color: #F7ECD5;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 7%;
+  border-radius: 5px;
+}
+
+.oldticket{
+  background-color: #c6b287;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 7%;
+  border-radius: 5px;
+}
+
+.flex-container{
+  display: flex;
+}
+
+#item1{
+  width: 70%;
+  padding-top: 1%;
+}
+
+.picture {
+  border-radius: 8px;
+  width: 30%;
+  height: 50%;
+  margin-top: 4%;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.description{
+  color: #0C4522;
+  font-weight: 550;
+  font-size: 1.1em;
+  margin-top: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+}
+.description2{
+  font-size: 0.9em;
+  color: #0C4522;
+  margin-left: 2%;
+}
+
+.flexcont{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.icon{
+  background-color:var(--background);
+  size: scale(2);
+  color: var(--foreground);
+  border: var(--background);
+  border-radius: 5px;;
+  margin-right: 2%;
+  padding:5px;
+  padding-bottom:2px;
+}
+
+.flexcontainer4{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.download-container {
+  flex-shrink: 1;
+  margin-right:3%;
+  width: fit-content;
+}
+
+.evaluate-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.evaluate{
+  margin-right: 3%;
+  margin-bottom: 3%;
+  border-radius: 500px;
+  background-color: var(--background);
+  color: #c6b287;
+  border: 1px solid #0C4522;
+}
+
+.evaluate .labelOne {
+  position: relative;
+  top: -6px;
+}

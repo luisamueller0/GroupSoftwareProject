@@ -1,0 +1,53 @@
+
+
+<div class="eventCard" *ngIf="!inPast" (click)="showEvent()">
+
+  <div class="flex-container">
+    <img class = "picture" src={{events?.picture}}>
+    <div #item1 *ngIf = datesAreEqual >
+      <p class="description">
+          {{ events?.title }}
+      </p>
+      <p class="description2">
+          {{ events?.start_date }}<br>
+          {{ events?.price }}
+      </p>
+    </div>
+    <div #item1 *ngIf = !datesAreEqual >
+      <p class="description">
+          {{ events?.title }}
+      </p>
+      <p class="description2">
+          {{ events?.start_date }} - {{events?.end_date }} <br>
+          {{ events?.price}}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="eventCardOld" *ngIf="inPast" (click)="showPastEvent()">
+  <div class="flex-container">
+    <img class = "picture" src={{events?.picture}}>
+    <div #item1 *ngIf = datesAreEqual >
+      <p class="description">
+          {{ events?.title }}
+      </p>
+      <p class="description2">
+          {{ events?.start_date }}<br>
+          {{ events?.price }}
+      </p>
+    </div>
+    <div #item1 *ngIf = !datesAreEqual >
+      <p class="description">
+          {{ events?.title }}
+      </p>
+      <p class="description2">
+          {{ events?.start_date }} - {{events?.end_date }} <br>
+          {{ events?.price}}
+      </p>
+    </div>
+  </div>
+</div>
+
+

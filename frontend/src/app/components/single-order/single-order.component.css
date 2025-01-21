@@ -1,0 +1,72 @@
+.shell {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 90px;
+  background-color: var(--mainau-beige);
+  margin-bottom: 20px;
+  color: rgba(12, 69, 34, 0.8);
+  font-size: large;
+  font-weight: 450;
+  border-radius: 10px;
+}
+
+
+.title{
+  text-align: center;
+  height: fit-content;
+  font-weight: bold;
+  color: #0C4522;
+  margin-top: 5px;
+  margin-left:10px;
+  margin-bottom: 5px;
+}
+
+.child {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #0C4522;
+  float: left;
+
+}
+
+.child1 {
+  margin-top: 5px;
+  margin-right: 10px;
+  float: right;
+  color: var(--mainau-gold);
+  font-weight:600;
+}
+
+.line{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 40px;
+  border-bottom: 2px solid rgba(12,69,34, 0.93);
+  position: relative;
+}
+
+.rowbuttons{
+  padding-top: 5px!important;
+  display: flex;
+  gap: 30px!important;
+  justify-content: center;
+}
+
+.grey{
+  background: rgba(219, 219, 219, 0.862) !important;
+  color: rgb(105, 105, 105)  !important;
+  border-color: rgba(155, 155, 155, 0.81) !important;
+  margin-bottom: 20px;
+}
+
+
+.errormsg{
+  font-size:16px!important;
+  margin-left:5%!important;
+  margin-right:5%!important;
+}
+
+

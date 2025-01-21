@@ -1,0 +1,45 @@
+<div class="single-order" *ngIf="showEvent" >
+    <h2 class = "backbtn">
+      {{eventName}}
+    </h2>
+
+    <div class="date text">
+      {{eventDate}}
+    </div>
+
+    <div *ngIf="!buyWarenkorb" class="amount text">
+      <span *ngIf="!hasSpecialTickets"> {{ticketAmount}}x Ticket<span *ngIf="ticketAmount !== '1'" >s</span> <br>
+      </span>
+
+      <span *ngIf="hasSpecialTickets && ticketAmount !== '0'">
+        {{ticketAmount}}x Standardticket<span *ngIf="ticketAmount !== '1'">s</span> <br>
+      </span>
+
+      <span *ngIf="childAmount !== '0'">
+        {{childAmount}}x Kinderticket<span *ngIf="childAmount !== '1'">s</span> <br>
+      </span>
+
+      <span *ngIf="seniorAmount !== '0'">
+        {{seniorAmount}}x Seniorenticket<span *ngIf="seniorAmount !== '1'">s</span> <br>
+      </span>
+
+      <span *ngIf="studentAmount !== '0'">
+        {{studentAmount}}x Schüler- & Studierendenticket<span *ngIf="studentAmount !== '1'">s</span> <br>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="shoppingcart" *ngIf="!showEvent"> <!-- Das sollte man lieber nicht hier unten einbauen, sondern oben integrieren-->
+    <h2 class = "backbtn">
+      Sammelbestellung
+    </h2>
+    <!-- -->
+  </div>
+
+
+  <div class="costs text">
+
+    Gesamtkosten:   {{ticketPrice}}
+
+  </div>

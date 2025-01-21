@@ -1,0 +1,40 @@
+<div class="cart">
+
+  <div class="flex-container">
+
+    <div class="title">
+        <h3> {{cartEvent?.title}}</h3>
+    </div>
+    <div class = "align">
+
+      <div class = "left-section">
+        <div class = "list">
+          <p class = "text" *ngIf="isNormalTicket">Standardticket:  {{ cartEvent?.normal_amount}}x</p>
+          <p class = "text" *ngIf="isSeniorTicket" > Seniorenticket: {{cartEvent?.senior_amount}}x</p>
+          <p class = "text" *ngIf="isStudentTicket" > Studententicket: {{cartEvent?.student_amount}}x</p>
+          <p class = "text"  *ngIf="isChildTicket"> Kinderticket: {{cartEvent?.child_amount}}x</p> <br>
+        </div>
+      </div>
+
+      <div class="image right-section">
+        <img  src={{src}}>
+      </div>
+    </div>
+
+    <div class="bottom">
+        <button class="singleDelete" (click)="openPopup()">  <mat-icon>delete_outline</mat-icon> <br>Aus Warenkorb löschen </button>
+        <p class="price" > Preis:  {{cartEvent?.total_price}}€</p>
+    </div>
+
+  </div>
+
+</div>
+
+<app-popup
+[popupType]="'deleteSingleEvent'"
+[showPopup]="showPopup"
+[deleteEvent] ="cartEvent?.title"
+(closePopupClicked)="closePopup()"
+(deleteClicked)="deleteSingleCartEvent()">
+</app-popup>
+

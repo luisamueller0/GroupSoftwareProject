@@ -1,0 +1,23 @@
+
+.picture {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.description{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.text{
+  font-weight:550;
+  padding-top:15px;
+  color: var(--foreground)!important;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  border-radius: 12px;
+}

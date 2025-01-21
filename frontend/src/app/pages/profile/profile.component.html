@@ -1,0 +1,97 @@
+<div class="page-container"[ngClass]="{'popup-open': showPopup}" lang="de">
+
+  <h2>Mein Profil</h2>
+
+  <div class="scrollable-container">
+
+    <div class="profile-info">
+      <table class="info-table">
+
+        <tr>
+          <td class="label">Name</td>
+          <td class="user-info" >{{user?.firstname}} {{user?.lastname}}</td>
+          <td class="button-cell">
+            <button class="btn edit-btn" (click)="changePageToName()">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label"> Adresse</td>
+          <td class="user-info">
+            {{user?.street}} {{user?.number}}
+            <br>
+            {{user?.postalcode}} {{user?.place}}</td>
+          <td class="button-cell">
+            <button class="btn edit-btn" (click)="changePageToAdresse()">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Email</td>
+          <td class="user-info" colspan="2">{{user?.email}}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Passwort</td>
+          <td class="user-info">●●●●●●●●</td>
+          <td class="button-cell">
+            <button class="btn edit-btn" (click)="changePageToPassword()">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class = "center">
+      <button class="btn layout" (click)="orders()">
+        <div class="btn-layout">
+          <div class="icon">
+              <mat-icon>receipt</mat-icon>
+          </div>
+          <div class="text">
+              Bestellungen
+          </div>
+        </div>
+      </button>
+
+      <button class="btn layout2 down" (click)="logout()">
+          <div class="btn-layout">
+              <div class="icon">
+                  <mat-icon>logout</mat-icon>
+              </div>
+              <div class="text">
+                  Abmelden
+              </div>
+          </div>
+      </button>
+      <button class="btn layout2 last"  (click) = "openPopup()">
+        <div class="btn-layout">
+          <div class="icon">
+            <mat-icon>delete_forever</mat-icon>
+        </div>
+            <div class="text">
+                Profil löschen
+            </div>
+        </div>
+      </button>
+    </div>
+
+    <div class="about">
+        Mehr Informationen <a routerLink="about">über uns</a>
+    </div>
+
+  </div>
+</div>
+
+<app-popup
+  [popupType]="'deleteProfile'"
+  [showPopup]="showPopup"
+  (closePopupClicked)="closePopup()"
+  (deleteClicked)="deleteProfile()">
+</app-popup>

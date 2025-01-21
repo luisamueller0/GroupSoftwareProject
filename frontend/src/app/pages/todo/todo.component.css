@@ -1,0 +1,32 @@
+.highlight {
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+.button-container button {
+    margin: 20px;
+    width: 280px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+button .icon {
+    transform: scale(3);
+    width: 20px;
+    margin-right: 40px;
+}

@@ -1,0 +1,23 @@
+<div class="page-container  scrollable-container">
+
+  <app-payment-header></app-payment-header>
+
+  <div class="square">
+    <div class="picture">
+        <img class="picture" src="/assets/payment/swpsafe.png">
+    </div>
+</div>
+  <div class="container">
+    <div class = "group">
+        <app-user-input  (enterKeyPressed)="checkInput()" msg = {{msg}} [invalid]="!bool" label="Code Eingeben" [(text)] = "code"></app-user-input>
+    </div>
+    <div class="errormsg" [ngStyle]="{'height': outputVisible ? '60px' : '0px' }"> {{outcome}} </div>
+    <div class="spinner" [ngStyle]="{'height': !outputVisible ? '60px' : '0px' }">
+      <app-loading-spinner [loading]="loading" [invisible]="outputVisible"></app-loading-spinner>
+    </div>
+    <div class="rowbuttons">
+      <button class="cancel button" mat-flat-button color="primary" (click)="cancel()"> Abbrechen </button>
+      <button class="save button" mat-flat-button color="accent" (click) = "checkInput()" > Jetzt Kaufen</button>
+     </div>
+</div>
+</div>

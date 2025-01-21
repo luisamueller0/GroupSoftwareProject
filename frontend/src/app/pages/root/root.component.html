@@ -1,0 +1,13 @@
+<div class="container">
+    <!-- Mittels <router-outlet> legen wir für Angular fest, wo der Inhalt zusätzlicher Seiten hereingeladen werden soll. -->
+    <!-- Der Inhalt von <router-outlet> wird also dynamisch von Angular ausgetauscht, basierend auf der Konfiguration die -->
+    <!-- wir in "app.module.ts" angegeben haben. -->
+    <div class="routing-box">
+        <router-outlet></router-outlet>
+    </div>
+
+    <!-- HTML Komponenten, die mit "app-" beginnen, sind projektspezifische Komponenten. -->
+    <!-- Diese werden automatisch von Angular durch den von uns vorgegebenen Code (in dem -->
+    <!-- Fall in "src/app/components/navigation-bar") dynamisch ausgetauscht. -->
+    <app-navigation-bar *ngIf="(loginService.isLoggedIn() && pageStatus.showNavigationBar())"></app-navigation-bar>
+</div>

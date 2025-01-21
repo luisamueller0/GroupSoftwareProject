@@ -1,0 +1,59 @@
+
+
+<div class="page-container">
+  <app-back-button></app-back-button>
+
+
+  <div class="container scrollable-container">
+    <div class = "container">
+      <h2>
+        Neues Kundenkonto
+      </h2>
+    </div>
+  <div class = "name group">
+    <app-user-input  [invalid]=!bools[0] msg = {{msgs[0]}} label="Vorname" [(text)] = "forename"></app-user-input>
+    <app-user-input  [invalid]=!bools[1] msg = {{msgs[1]}} label="Nachname"  [(text)] = "surname"></app-user-input>
+  </div>
+  <div class = "group">
+    <div class = "street">
+      <app-user-input  [invalid]=!bools[2] msg = {{msgs[2]}} label="Straße" [(text)] = "street"></app-user-input>
+      <app-user-input  [invalid]=!bools[3] msg ={{msgs[3]}} label="Nummer"  [(text)] = "number"></app-user-input>
+    </div>
+      <app-user-input [invalid]=!bools[4] msg = {{msgs[4]}} label="Postleitzahl"  [(text)] = "postalcode"></app-user-input>
+      <app-user-input  [invalid]=!bools[5] msg = {{msgs[5]}} label="Ort"  [(text)] = "place"></app-user-input>
+  </div>
+  <div class = "group">
+    <app-user-input  [invalid]=!bools[6] msg = {{msgs[6]}}  label="Email"  [(text)] = "email"></app-user-input>
+    <app-user-input  [invalid]=!bools[7] msg = {{msgs[7]}} label="Passwort" type="password"  [(text)] = "password"></app-user-input>
+    <app-user-input (enterKeyPressed)="register()" [invalid]=!bools[8] msg = {{msgs[8]}} label="Passwort Wiederholen" type="password"  [(text)] = "passwordTest"></app-user-input>
+
+
+  </div>
+
+    <button class="register-btn" mat-flat-button color="accent" (click)="register()">Registrieren</button>
+
+    <div class ="errormsg" *ngIf="errorMessage !== ''" [innerHTML]="errorMessage">
+      {{errorMessage}}
+    </div>
+    <div class="login">
+      Konto vorhanden?
+
+      <a routerLink="/login">Zum Login</a>
+    </div>
+
+
+    <div class="login about">
+      Mehr Informationen <a routerLink="/about">über uns</a>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>

@@ -1,0 +1,53 @@
+<div class="page-container">
+    <app-back-button></app-back-button>
+
+    <h1>Beispiel</h1>
+
+    <div class="scrollable-container">
+        <p>
+            Diese Komponente kann gelöscht werden und sollte durch eine relevante Seite ersetzt werden (siehe User Stories).
+        </p>
+
+        <p class="highlight"> Bitte macht euch mit der Angular Dokumentation vertraut! </p>
+
+        <ul>
+            <li *ngFor="let link of links">
+                <a target="_blank" href="{{ link.url }}">
+                    {{ link.name }}
+                </a>
+            </li>
+        </ul>
+
+        <br />
+        <hr />
+        <br />
+
+        <p>
+            Mithilfe von <code>Components</code> können Bestandteile des Frontends ausgekapselt und in anderen
+            <code>Components</code> wiederverwendet werden.
+            Die <code>Components</code> können dann mithilfe dem (in der jeweiligen <code>.component.ts</code> Datei)
+            definierten <code>selector</code> ganz einfach als HTML Komponente eingebunden werden.
+            Bitte verwendet entweder den <code>ng generate</code> Befehl oder das Kontextmenü von Visual Studio Code zur
+            Erstellung neuer Komponenten, da die Komponente auch in der <code>app.module.ts</code> Datei eingetragen werden
+            muss!
+        </p>
+
+        <p>
+            Hier ein Beispiel von zwei <code>Input</code> Elementen, die Daten mittels ihrem definiertem <code>@Input</code>
+            teilen:
+        </p>
+
+        <app-user-input label="Lokal synchronisierter Input 1" [(text)]="text"></app-user-input>
+        <app-user-input label="Lokal synchronisierter Input 2" [(text)]="text"></app-user-input>
+        <p> Der Text lautet: {{ text }} </p>
+
+
+        <p>
+            Hier ein weiteres Beispiel von einem <code>Input</code> Element, das Daten mittels einem Service speichert (bis
+            die Seite neu geladen wird):
+        </p>
+
+        <app-user-input label="Global synchronisierter Input" [(text)]="sampleService.globalText"></app-user-input>
+
+    </div>
+</div>

@@ -1,0 +1,36 @@
+
+
+<div class="page-container">
+
+  <button class = 'x-btn' (click) = 'cancel()'> <mat-icon>cancel</mat-icon></button>
+  <h2>
+    Adresse
+  </h2>
+
+  <div class="container scrollable-container">
+    <div class = "group">
+
+      <div class = "street">
+        <app-user-input  [invalid]=!bools[0] msg = {{msgs[0]}} label="Straße" [(text)] = "street"></app-user-input>
+        <app-user-input  [invalid]=!bools[1] msg ={{msgs[1]}} label="Nummer"  [(text)] = "number"></app-user-input>
+      </div>
+
+      <app-user-input [invalid]=!bools[2] msg = {{msgs[2]}} label="Postleitzahl"  [(text)] = "postalcode"></app-user-input>
+      <app-user-input  (enterKeyPressed)="checkInput()" [invalid]=!bools[3] msg = {{msgs[3]}} label="Ort"  [(text)] = "place"></app-user-input>
+
+    </div>
+
+    <div class="rowbuttons">
+      <button class="cancel button" mat-flat-button color="primary" (click)="cancel()"> Abbrechen </button>
+      <button class="save button"mat-flat-button color="accent" (click) = "checkInput()" > Speichern</button>
+      </div>
+
+    <div class ="errormsg" >{{errorMessage}} </div>
+    <div class = "successmsg" > {{successMessage}} </div>
+
+
+  </div>
+
+
+
+</div>

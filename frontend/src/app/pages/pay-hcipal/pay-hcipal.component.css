@@ -1,0 +1,28 @@
+.picture {
+  margin-right: auto;
+  margin-top: -40px;
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  background-size: cover;
+}
+
+.square {
+  margin-top: 20%;
+  border-radius: 60px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 40%;
+  height: 40px;
+  background-color:aliceblue;
+}
+
+.spinner {
+  margin-top: 10px;
+  text-align: center;
+}
+.page-container {
+  padding-top: 50px!important;
+}

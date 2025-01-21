@@ -1,0 +1,44 @@
+.about-me {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 16px;
+}
+
+.picture {
+  width: 90px;
+  height: 90px;
+  margin-top: 2px;
+  margin-right: 20px;
+  background-size: cover;
+  border-radius:10px;
+}
+
+.name{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.description{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.mail{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+p {
+  line-height: 1;
+}
+
+div {
+  margin-bottom: 0px;
+}
+

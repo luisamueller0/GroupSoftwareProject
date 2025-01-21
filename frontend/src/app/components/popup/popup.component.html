@@ -1,0 +1,158 @@
+ <!-- Event list for event markers with more than one event on the map page -->
+<div class="popup-container-big" *ngIf="popupType === 'eventList' && showPopup">
+
+  <div class="page-container">
+
+    <button class="x-btn" (click)="onClosePopupClick()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+
+    <h2 class="x">
+      {{ eventLocation }}
+    </h2>
+
+    <div class="scrollable-container">
+
+      <div *ngFor="let event of popupEvents">
+        <app-single-event [events]="event"></app-single-event>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Confirming deletion of user's profile, shopping cart or a single event in the shopping cart.-->
+<div class="popup-container-small"
+[ngClass]="{'adjust': popupType === 'deleteSingleEvent'}"
+*ngIf="(popupType === 'deleteCart'|| popupType === 'deleteProfile'||popupType === 'deleteSingleEvent') && showPopup">
+
+  <div class="page-container edge">
+
+    <h2 class = "head">
+      Achtung!
+    </h2>
+
+    <!-- For the popup on profile page when clicked on delete profile button.-->
+    <p *ngIf="popupType === 'deleteProfile'" class ="question">
+      Sind Sie sich sicher, dass Sie Ihr Profil löschen wollen?
+    </p>
+
+    <!-- For the popup on shoppingCart-->
+    <p *ngIf="popupType === 'deleteCart'"class ="question">
+      Sind Sie sich sicher, dass Sie Ihren Warenkorb löschen wollen?
+    </p>
+
+    <!-- For the popup on shoppingCart when deletingsingle event-->
+    <p *ngIf="popupType === 'deleteSingleEvent'" class ="question">
+      Sind Sie sich sicher, dass Sie die Tickets zum Event "{{deleteEvent}}" aus dem Warenkorb löschen wollen?
+    </p>
+
+    <div class="rowbuttons">
+
+      <button class="cancel button"
+        mat-flat-button
+        (click)="onClosePopupClick()">
+        Abbrechen
+      </button>
+
+      <button class="delete button"
+        mat-flat-button
+        (click) = "onDeleteClick()" >
+        Löschen
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- confirming or cancel refund of an order. -->
+  <div class="popup-container-small" *ngIf="popupType === 'question' && showPopup">
+
+  <div class="page-container edge">
+
+    <h2 class = "head">
+      Achtung!
+    </h2>
+
+    <p class ="question">
+      Sind Sie sich sicher, dass Sie die Bestellung stornieren möchten?
+    </p>
+
+    <div class="rowbuttons">
+
+      <button class="cancel button"
+        mat-flat-button
+        (click)="onClosePopupClick()">
+        Nein
+      </button>
+      <button class="delete button"
+        mat-flat-button
+        (click)="onDeleteClick()">
+        Ja
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Feedback that refund is in progress for an order. -->
+<div class="popup-container-small" *ngIf="popupType === 'refundInProgress' && showPopup">
+
+  <div class="page-container edge">
+
+    <h2 class = "head">
+      Stornierung erfolgt
+    </h2>
+
+    <p class ="question successmsg">
+      Das Geld wird an Ihr Konto zurückerstattet.
+      <br>
+      Bitte haben Sie Geduld.
+    </p>
+
+    <div class = "center">
+      <app-loading-spinner [big]="true"></app-loading-spinner>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Information why refunding is not possible for an order. -->
+<div class="popup-container-small" *ngIf="popupType === 'noRefund' && showPopup">
+
+  <div class="page-container edge">
+
+    <button class="x-btn dark"
+      (click)="onClosePopupClick()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+
+    <h2 class = "head up">
+      Keine Stornierung möglich
+    </h2>
+
+    <p class="question">
+      Die Bestellung beinhaltet Tickets von bereits vergangenen Events.
+    </p>
+
+  </div>
+
+</div>
+
+
+

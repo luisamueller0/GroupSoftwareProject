@@ -1,0 +1,76 @@
+/* Styling for the password confirmation container */
+.container * {
+  margin-top: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Header for the password confirmation section */
+.head {
+  font-size: 18px;
+  color: var(--foreground);
+  font-weight: 500;
+  text-align: center;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 15px;
+  height: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 10px !important;
+  height: 35px;
+}
+
+.errormsg {
+  margin: 20px !important;
+  padding-top: 10px !important;
+}
+
+.question {
+  padding: 30px;
+  margin-bottom: -30px;
+}
+
+.enter {
+  color: rgba(247, 236, 213, 1);
+  border-radius: 5px;
+  color: var(--background);
+}
+
+.okbutton {
+  width: 100px;
+}
+
+.ok {
+  margin-top: 30px;
+  padding-top: 40px;
+  text-align: center !important;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--foreground);
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.text {
+  text-align: left;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.center {
+  text-align: center;
+}

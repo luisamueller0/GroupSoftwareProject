@@ -1,0 +1,75 @@
+.label {
+    margin-left: 3px;
+    margin-bottom: -4px;
+
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.label.error{
+  font-weight: 600;
+  font-size: 16px;
+  color: red;
+}
+.msg{
+  margin-left: 3px;
+  margin-top: -4px;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}
+input {
+     width: calc(100% - 23px); /*leave space for x on the right*/
+    margin: 0;
+    border-radius: 5px;
+    background: none!important;
+    color: var(--background);
+    border-width:0px;
+    font-size: 16px;
+    padding: 7px;
+}
+
+/* Remove outline when input is selected */
+input:focus {
+    outline: none;
+}
+
+.width{
+  width: 100%;
+}
+.container.error {
+  position: relative;
+  margin-bottom: -15px;
+  width: 100%;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+
+.input2{
+  position: relative; /* Add position relative */
+  background: rgba(247, 236, 213, 0.7);
+  border-radius: 5px;
+
+
+}
+.input2.error {
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+}
+
+
+.icon{
+  position:absolute;/* Take remaining space in the flex container */
+  top: 15%; /* Center the icon vertically */
+  color: #0C4522;
+  font-size: 15px;
+  right:5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+

@@ -1,0 +1,34 @@
+
+
+<div class="page-container">
+
+  <app-back-button></app-back-button>
+
+  <div class="scrollable-container">
+
+    <h2 class="backbtn">{{attraction?.name}}</h2>
+
+    <img class="d-picture" src={{src}}>
+
+    <hr>
+
+    <div class="d-description"
+    [innerHTML]="attraction?.description_html">
+    </div>
+
+    <hr>
+
+    <p class="d-text">
+      Standort auf der Insel
+    </p>
+
+    <div class="d-map"
+    leaflet
+    [leafletOptions]="options"
+    [leafletLayers]="layers"
+    [leafletCenter]="coords">
+    </div>
+
+  </div>
+
+</div>

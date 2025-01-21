@@ -1,0 +1,42 @@
+<div class="page-container">
+  <app-back-button></app-back-button>
+
+    <div class="scrollable-container">
+    <app-payment-header></app-payment-header>
+
+
+
+
+      <h3>Zahlungsanbieter</h3>
+        <div class="buttons">
+          <button class="payment-button" (click)="payment('bachelorcard')">
+
+            <div class="picture">
+              <img class="picture" src="/assets/payment/bachelorcard.png">
+            </div>
+
+          </button>
+        </div>
+
+        <div class="buttons">
+          <button class="payment-button" (click)="payment('hcipal')">
+
+            <div class="picture">
+              <img class="picture" src="/assets/payment/hciPal.png">
+            </div>
+
+          </button>
+        </div>
+
+        <div class="buttons">
+          <button class="payment-button" (click)="payment('swpsafe')">
+
+            <div class="picture">
+              <img class="picture" src="/assets/payment/swpsafe.png">
+            </div>
+
+          </button>
+        </div>
+
+    </div>
+</div>

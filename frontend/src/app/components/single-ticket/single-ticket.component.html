@@ -1,0 +1,97 @@
+<div *ngIf="!isOldEvent" class="ticket">
+
+  <div class="flex-container">
+    <img class="picture" src={{tickets?.picture}}>
+    <div id="item1" *ngIf=datesAreEqual>
+      <div class="flexcont">
+        <p class="description">
+          {{tickets?.number}}x {{ tickets?.title }}
+        </p>
+        <div class="download-container">
+          <button class="icon" (click)="downloadTicket()">
+            <mat-icon>get_app</mat-icon>
+          </button>
+        </div>
+      </div>
+      <p class="description2">
+        {{ tickets?.start_date }}
+      </p>
+    </div>
+    <div id="item1" *ngIf=!datesAreEqual>
+      <div class="flexcont">
+        <p class="description">
+          {{tickets?.number}}x {{ tickets?.title }}
+        </p>
+        <div class="download-container">
+          <button class="icon" (click)="downloadTicket()">
+            <mat-icon>get_app</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <p class="description2">
+        {{ tickets?.start_date }} - {{tickets?.end_date }}
+      </p>
+
+    </div>
+
+  </div>
+
+  <p class="successmsg" *ngIf="download">Ticket(s) werden heruntergeladen.</p>
+
+</div>
+
+<app-rating-popup *ngIf="oldTickets"
+[title]="oldTickets.title"
+[start_date]="oldTickets.start_date"
+[end_date]="oldTickets.end_date"
+[event_id]="oldTickets.event_id"
+[refresh]="true"
+[(isBewertenVisible)]="isBewertenVisible" ></app-rating-popup>
+
+
+<div *ngIf="isOldEvent" class="oldticket">
+
+  <div class="flexcontainer4">
+
+    <div class="flex-container">
+
+      <img class = "picture" src={{oldTickets?.picture}}>
+
+      <div id="item1" *ngIf = oldDatesAreEqual >
+        <div class="flexcont" >
+            <p class="description">
+                {{oldTickets?.number}}x {{ oldTickets?.title }}
+            </p>
+        </div>
+
+        <p class="description2">
+            {{ oldTickets?.start_date }}
+        </p>
+      </div>
+
+      <div id="item1" *ngIf = !oldDatesAreEqual >
+
+        <div class="flexcont">
+          <p class="description">
+              {{oldTickets?.number}}x {{ oldTickets?.title }}
+          </p>
+        </div>
+
+        <p class="description2">
+          {{ oldTickets?.start_date }} - {{oldTickets?.end_date }}
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="evaluate-container">
+      <button class="evaluate" (click)="evaluate($event)" *ngIf="canEvaluate && !hasEvaluated">
+        <mat-icon>create</mat-icon> <label class="labelOne" for="mat-icon"> Rezension schreiben </label>
+      </button>
+    </div>
+
+  </div>
+
+</div>

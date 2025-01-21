@@ -1,0 +1,20 @@
+
+<div class="container" [ngClass]="{'error': invalid && msg !== ''}">
+
+    <p class="label" [ngClass]="{'error' : invalid}" *ngIf="label">{{ label }}</p>
+    <div class="input2"[ngClass]="{'error' : invalid}">
+
+      <input  (keydown.enter)="onEnterKeyPressed()" *ngIf="type !== 'date'" [type]="showPassword ? 'text' : type"  [(ngModel)]="text" (ngModelChange)="onTextChange()" #inputField>
+      <input (keydown.enter)="onEnterKeyPressed()" class="width" *ngIf="type === 'date'"  [type]="type" [(ngModel)]="text" (ngModelChange)="onTextChange()" #inputField>
+
+
+      <div class="icon" (click)="remove()"*ngIf="text && type !== 'password' && type !== 'date'"><mat-icon>clear</mat-icon></div>
+
+      <div class="icon" (click)="togglePasswordVisibility()" *ngIf="text && type === 'password'">
+        <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </div>
+    </div>
+
+
+  <p class="msg" [ngClass]="{'error' : invalid}" *ngIf="msg && invalid">{{ msg }}</p>
+</div>

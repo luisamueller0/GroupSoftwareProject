@@ -1,0 +1,24 @@
+
+<div class="scrollable-container">
+
+    <h2>Meine Tickets</h2>
+
+
+    <div class="noTicket" *ngIf="noTickets">
+        <p class = "text">Sie haben noch keine Tickets.</p>
+    </div>
+
+
+    <div *ngFor="let item of allTickets">
+        <app-single-ticket [tickets] = 'item'></app-single-ticket>
+    </div>
+
+
+    <div *ngIf="showOldTickets" class="refline">
+        <hr>
+     <div  *ngFor="let item of pastTickets">
+         <app-single-ticket [oldTickets] = 'item'></app-single-ticket>
+     </div>
+    </div>
+
+</div>

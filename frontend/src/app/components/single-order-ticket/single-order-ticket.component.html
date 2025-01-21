@@ -1,0 +1,19 @@
+<div class="shell">
+  <div class="title" >{{orderTicket?.title}}<br></div>
+  <div class = "date" *ngIf="sameDate">
+     ({{startDate}})
+</div>
+<div class = "date" *ngIf="!sameDate">
+    ({{startDate}} - {{endDate}})
+</div>
+
+  <div class="line"></div>
+  <div>
+    <div class="list">
+        <p class = "text" *ngIf="!noNormalAmount"> {{normalAmount}}x Standardticket </p>
+        <p class = "text" *ngIf="!noSeniorAmount" >{{seniorAmount}}x Seniorenticket </p>
+        <p class = "text" *ngIf="!noStudentAmount" > {{studentAmount}}x Studententicket</p>
+        <p class = "text"  *ngIf="!noChildAmount"> {{childAmount}}x Kinderticket </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.eventCard{
+  background-color: #F7ECD5;
+  color: #0C4522;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.eventCardOld{
+  background-color: #c6bead;
+  color: #0C4522;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.flex-container{
+  display: flex;
+}
+
+#item1{
+  width: 50%;
+}
+
+.description{
+  margin-top: 5px;
+  margin-bottom: 0%;
+  font-weight: 1000;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+.description2{
+  font-size: small;
+}
+
+.picture {
+  border-radius: 8px;
+  width: 30%;
+  height: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-size: cover;
+  flex-shrink: 0;
+}

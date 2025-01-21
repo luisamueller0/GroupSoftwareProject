@@ -1,0 +1,93 @@
+<div class = "page-container">
+
+  <h2>Events</h2>
+
+  <div class = "style">
+
+    <div class="search">
+        <app-user-input label="Suche" [(text)] = 'searchEvent' (textChange)="searchEvents()" ></app-user-input>
+    </div>
+
+    <button *ngIf="!showDropdown" class="dropbtn"  (click) = "dropdown()">Mehr Optionen</button>
+    <button *ngIf="showDropdown" class = "dropbtn marked"  (click) = "dropdown()">Mehr Optionen</button>
+
+    <div class = "filter"*ngIf="activated">
+      Angewandte Filter: <br>{{filter}}
+    </div>
+
+  </div>
+
+  <div class = "scrollable-container">
+
+    <div *ngIf="isOld">
+      <div *ngFor="let item of events">
+        <app-single-event [events] = 'item'></app-single-event>
+      </div>
+    </div>
+
+      <div *ngIf="!isOld">
+        <div *ngFor="let item of events">
+          <app-single-event [events] = 'item'></app-single-event>
+        </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<div class="popup-container" *ngIf="showDropdown">
+
+  <div class = "rowbuttons">
+    <button class = "btn reset" (click)="reset()"> Zurücksetzen </button>
+
+    <button class = "btn close" (click)="dropdown()"> Schließen</button>
+
+  </div>
+  <h3 class = "center">Filter</h3>
+
+  <div class= "scontainer">
+
+  <div class = "map-container">
+    <p class = "map-title input" *ngIf="!markerSelected">
+      Filtern nach Attraktion:<br>
+    </p>
+    <p class = "map-title input" *ngIf="markerSelected">
+      Events an der Attrakion: <br>{{ attraction }}
+    </p>
+    <div class="map"
+    leaflet
+    [leafletOptions]="options"
+    [leafletLayers]="layers">
+    </div>
+  </div>
+
+      <div class="slider-container input">
+        <p class="slider-label">
+          Preis
+        </p>
+        <div class="slider-wrapper">
+          <p class="slider-text min">{{ minPrice }}€</p>
+            <mat-slider class="mat-slider"[min]="min" [max]="max"discrete (change)="searchEvents()"  [displayWith]="formatLabel">
+              <input [(value)] = 'minPrice' matSliderStartThumb>
+              <input [(value)] = 'maxPrice' matSliderEndThumb>
+            </mat-slider>
+          <p class="slider-text max">{{ maxPrice }}€</p>
+        </div>
+      </div>
+
+      <div class="input">
+          <app-user-input type="date"   label = 'Datum' [(text)] = 'date' (textChange)="searchEvents()" ></app-user-input>
+    </div>
+
+    <mat-slide-toggle class = "input"
+    [checked]="slideToggleValue"
+    (change)="onSlideToggleChange($event)">
+    vergangene Events anzeigen
+    </mat-slide-toggle>
+
+  </div>
+
+</div>
+
+

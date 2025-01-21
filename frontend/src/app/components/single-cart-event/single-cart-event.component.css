@@ -1,0 +1,106 @@
+.cart{
+  background-color: #F7ECD5;
+  color: #0C4522;
+  border-radius: 10px;
+  margin-top: 7%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+h3{
+  margin-left: 2%!important;
+  margin-right: 2%!important;
+  color: var(--background);
+}
+.text{
+  font-weight:500;
+  font-size: 18px;;
+}
+
+.price{
+  font-weight:500;
+  font-size: 18px;;
+  color: var(--mainau-gold)
+}
+.title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+  line-height: 1.5;
+  margin-bottom: 10%;
+}
+
+.differentTickets{
+  margin-top: -10%;
+  margin-left: 5%;
+  margin-bottom: -10px;
+}
+
+.price{
+  margin-right: 5%;
+  font-weight:500;
+  font-size: 18px;;
+  color: var(--mainau-gold)
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  border-width:5px;
+  border: var(--background);
+  margin-top:-30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+}
+
+.align {
+  display: flex;
+  padding-bottom:10px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.list{
+  margin-left: 5%;
+  margin-top: -10%;
+  display: flex;
+  gap:0px;
+  flex-direction: column;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.image img {
+  max-height:100px;
+  width:auto;
+  text-align: right;
+  border-radius: 20px;
+  border: 5px solid var(--background)!important;
+  box-sizing: border-box!important;
+  border-width: 5px;
+  margin-right:7%;
+  border: var(--background);
+}
+
+.singleDelete{
+  background-color: transparent;
+  border: none;
+  color: var(--background);
+  font-weight: 500;
+  margin-top: -5%;
+  margin-bottom: 3%;
+  margin-left: 2%;
+}

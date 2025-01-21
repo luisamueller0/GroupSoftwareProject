@@ -1,0 +1,65 @@
+<div class="shell">
+
+  <div>
+    <div class="child"> {{orders?.placed_on}}  </div>
+    <div class="child1"> {{orders?.price}}€ </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="rowbuttons">
+
+    <button mat-flat-button color="accent" class = "save" (click)="toggleDetails()">Tickets Anzeigen</button>
+
+    <div *ngIf="!includesPastTickets">
+      <button mat-raised-button class = "delete" (click)="refundSafety()" >Stornieren</button>
+    </div>
+
+    <div *ngIf="includesPastTickets">
+      <button class="grey" mat-raised-button (click)="noRefund()" > Stornieren</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div *ngIf="showDetails" >
+  <div *ngFor="let item of allOrderTickets">
+    <app-single-order-ticket [orderTicket] = 'item'></app-single-order-ticket>
+  </div>
+</div>
+
+<div class ="successmsg" *ngIf="refundActivated">
+  {{refundMessage}}
+</div>
+
+<div class ="errormsg" *ngIf="errorMessage !== ''">
+  {{errorMessage}}
+</div>
+
+
+<div  *ngIf=" !refundInProgress">
+<app-popup
+[popupType]="'question'"
+[showPopup]="showPopup"
+(closePopupClicked)="cancel()"
+(deleteClicked)="refund()">
+</app-popup>
+</div>
+
+<div  *ngIf=" refundInProgress">
+<app-popup
+[popupType]="'refundInProgress'"
+[showPopup]="showPopup">
+</app-popup>
+</div>
+
+<div *ngIf="showNoRefund">
+  <app-popup
+[popupType]="'noRefund'"
+[showPopup]="showNoRefund"
+(closePopupClicked)="close()">
+</app-popup>
+
+</div>

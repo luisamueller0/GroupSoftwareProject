@@ -1,0 +1,31 @@
+<div class="scrollable-container" [ngClass]="{'popup-open': showPopup}">
+    <h2>Warenkorb</h2>
+
+    <div *ngIf="nothingInTheCart" class="leer">
+        <p class = "text">Ihr Warenkorb ist aktuell leer.</p>
+    </div>
+
+    <div *ngFor="let item of allCartEvents">
+        <app-single-cart-event [cartEvent] = 'item'></app-single-cart-event>
+    </div>
+
+    <hr class="line" *ngIf="!lengthZero">
+    <div class="flex-container" *ngIf="!lengthZero">
+        <p class ="total">Gesamtpreis: {{endPreis}}€</p>
+    </div>
+
+    <div class = "buttons" *ngIf="!lengthZero">
+      <button class="btn save" mat-flat-button color="accent" (click)="buyCart()">
+        Jetzt Kaufen
+     </button>
+      <button class="btn delete" mat-flat-button color="accent" (click)="openPopup()">Warenkorb löschen  <mat-icon>delete_forever</mat-icon></button>
+
+    </div>
+</div>
+
+<app-popup
+[popupType]="'deleteCart'"
+[showPopup]="showPopup"
+(closePopupClicked)="closePopup()"
+(deleteClicked)="deleteCart()">
+</app-popup>

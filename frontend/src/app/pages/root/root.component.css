@@ -1,0 +1,16 @@
+.container {
+    line-height: 1.6;
+    font-size: 18px;
+    height: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+.routing-box {
+    overflow: hidden;
+    height: 100%;
+}

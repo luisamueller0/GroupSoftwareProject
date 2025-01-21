@@ -1,0 +1,185 @@
+/* Style for the checkbox */
+input[type="checkbox"] {
+  margin-right: 5px; /* Adjust spacing between checkbox and label */
+}
+
+.popup{
+  z-index: 3;
+  width: 90%;
+  height: 51%;
+  border-radius: 2%;
+  background-color: var(--foreground);
+  border: 4px solid var(--mainau-gold) ;
+  stroke-width: 50px;
+  color: var(--background);
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  transform: scale(0.1);
+  opacity: 0;
+  transition: transform 0.4s, top 0.4s, scale 0.4s;
+}
+
+.transitionZwei{
+  top: 30%;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.flexcontainer2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.review-input{
+  width: 90%;
+  height: 20vh;
+  margin-left: 5%;
+  border: 2px solid var(--mainau-gold);
+
+  outline-color: var(--mainau-gold);
+  box-shadow: 1px 1px 1px #999;
+  border-radius: 2px;
+  resize: none;
+  margin-top: 1%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+.showStars{
+  display: none;
+}
+.showStarsMargin{
+  display: none;
+  margin-left: 10%;
+}
+
+.gold{
+  color: var(--mainau-gold);
+  font-size: 30px;
+}
+
+.rowbuttons{
+  margin-top:-10px;
+  gap:70px!important;
+}
+
+.cancel{
+  background-color: var(--background)!important;
+  color: var(--foreground)!important;
+}
+
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--mainau-gold);
+}
+
+/* Define a custom checkbox style */
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--mainau-gold);
+}
+
+
+input[type="checkbox"]:checked::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--mainau-gold);
+  border-radius: 0px;
+  content: "\2714"; /* Checkmark character (✔) */
+  color: var(--foreground);
+  font-size: 10px;
+  text-align: center;
+  line-height: 10px;
+  background-color: var(--mainau-gold); /* Change color when checked */
+}
+
+.Input{
+  margin-top:12px;
+  margin-left:9%;
+  font-size:16px;
+  color: var(--mainau-gold)!important;
+  font-weight:500!important;
+}
+
+.title{
+  color: var(--background);
+  margin-bottom:-10px!important;
+  text-align:center;
+}
+
+.startDate{
+  text-align:center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--background);
+}
+
+.warning{
+  position: absolute;
+  color: red;
+  top: 50%;
+  margin-left: 12%;
+}
+
+.success{
+  background-color: #0C4522;
+  border-radius: 9px;
+  border: 1px solid antiquewhite;
+  position: absolute;
+  top: 30%;
+  width: 50%;
+  height: 15%;
+  margin-left: 21%;
+  z-index: 3;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.4s, opacity 0.4s, scale 0.4s;
+}
+.success.hidden {
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.thanking{
+  font-size: larger;
+  color: antiquewhite;
+}
+
+.tooManySigns{
+  position: absolute;
+  color: white;
+  top: 50%;
+  margin-left: 12%;
+  z-index: 3;
+  background-color: var(--background);
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.remaningChars{
+  color: var(--mainau-gold);
+  font-size: medium;
+  margin-left: 6%;
+  margin-top: -2%;
+}

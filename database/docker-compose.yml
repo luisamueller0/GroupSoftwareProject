@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+    swp-postgres:
+        image: postgres:15.2-alpine
+        restart: unless-stopped
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=CHOOSE_A_PASSWORD
+            - POSTGRES_DB=postgres
+        ports:
+            - 50000:5432
+        volumes: 
+            - ./db_data:/var/lib/postgresql/data
+            - ./scripts/init.sql:/docker-entrypoint-initdb.d/1init.sql
+            #- ./scripts/data.sql:/docker-entrypoint-initdb.d/2data.sql
+

@@ -1,0 +1,24 @@
+<div class="page-container">
+  <button class = 'x-btn' (click) = 'cancel()'> <mat-icon>cancel</mat-icon></button>
+  <h2>
+    Name
+  </h2>
+
+  <div class="container scrollable-container">
+
+    <div class = "group">
+      <app-user-input msg = {{msgs[0]}} [invalid]="!bools[0]" label="Vorname"  [(text)] = "forename"></app-user-input>
+      <app-user-input (enterKeyPressed)="checkInput()" msg = {{msgs[1]}} [invalid]="!bools[1]" label="Nachname"  [(text)] = "surname"></app-user-input>
+    </div>
+
+    <div class="rowbuttons">
+      <button class="cancel button" mat-flat-button color="primary" (click)="cancel()"> Abbrechen </button>
+      <button class="save button"mat-flat-button color="accent" (click) = "checkInput()" > Speichern</button>
+    </div>
+
+    <div class ="errormsg" >{{errorMessage}} </div>
+    <div class ="successmsg" >{{successMessage}} </div>
+
+  </div>
+
+</div>

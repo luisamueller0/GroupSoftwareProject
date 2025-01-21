@@ -1,0 +1,129 @@
+<div class="page-container">
+  <app-back-button></app-back-button>
+
+  <h2>
+        {{eventName}}
+  </h2>
+
+      <div class="date">
+            {{eventDate}}
+      </div>
+
+
+      <div class="scrollable-container">
+           <mat-card class="table-bg">
+                <table class="table">
+                    <tr class = "type">
+
+                      <div class="popup" (click)="openThisInfo('myPopup')">&#9432;
+                        <span class="popuptext" id="myPopup">Standard-Ticket</span>
+                      </div>
+                        <td class = "ticket">Ticket</td>
+                        <td class= "price">{{price_normal}}</td>
+
+                        <td>
+                            <button (click)="changeAmount(true, 'normal', $event)" class="amount_button" mat-fab >
+                                <mat-icon class="icon" >add</mat-icon>
+                            </button>
+                        </td>
+                        <td>{{normalAmount}}</td>
+                        <td>
+                            <button (click)="changeAmount(false, 'normal', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >remove</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    <div class = "line" *ngIf="!(!price_child)"></div>
+                    <div class = "spacing" *ngIf="!(!price_child)"></div>
+                    <tr class = "type" *ngIf="!(!price_child)">
+                      <div class="popup" (click)="openThisInfo('myPopup1')">&#9432;
+                        <span class="popuptext" id="myPopup1">Ticket für Kinder zwischen 6 und 12 Jahren</span>
+                      </div>
+
+                        <td class = "ticket">Kinderticket </td>
+                        <td class= "price">{{price_child}}</td>
+
+                        <td>
+                            <button (click)="changeAmount(true, 'child', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >add</mat-icon>
+                            </button>
+                        </td>
+                        <td>{{childAmount}}</td>
+                        <td>
+                            <button (click)="changeAmount(false, 'child', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >remove</mat-icon>
+                            </button>
+                        </td>
+
+                    </tr>
+                    <div class = "line" *ngIf="!(!price_senior)"> </div>
+                    <div class = "spacing" *ngIf="!(!price_senior)"></div>
+                    <tr class = "type" *ngIf="!(!price_senior)">
+                      <div class="popup" (click)="openThisInfo('myPopup2')">&#9432;
+                        <span class="popuptext" id="myPopup2">Ticket für Personen, die 60 Jahre oder älter sind</span>
+                      </div>
+                        <td class = "ticket">Seniorenticket</td>
+                        <td class= "price">{{price_senior}}</td>
+
+                        <td>
+                            <button (click)="changeAmount(true, 'senior', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >add</mat-icon>
+                            </button>
+                        </td>
+                        <td>{{seniorAmount}}</td>
+                        <td>
+                            <button (click)="changeAmount(false, 'senior', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >remove</mat-icon>
+                            </button>
+                        </td>
+
+                    </tr>
+                    <div class = "line" *ngIf="!(!price_student)"></div>
+                    <div class = "spacing" *ngIf="!(!price_student)"></div>
+                    <tr class = "type" *ngIf="!(!price_student)">
+                      <div class="popup" (click)="openThisInfo('myPopup3')">&#9432;
+                        <span class="popuptext" id="myPopup3">Ticket für Schüler und Studierende.</span>
+                      </div>
+                        <td class = "ticket">Schüler- & Studierendenticket</td>
+                        <td class= "price">{{price_student}}</td>
+                        <td>
+                            <button (click)="changeAmount(true, 'student', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >add</mat-icon>
+                            </button>
+                        </td>
+                        <td>{{studentAmount}}</td>
+                        <td>
+                            <button (click)="changeAmount(false, 'student', $event)" class="amount_button" mat-fab>
+                                <mat-icon class="icon" >remove</mat-icon>
+                            </button>
+                        </td>
+
+                    </tr>
+               </table>
+           </mat-card>
+
+          <div class="costs">
+             Gesamtkosten: {{total}}€
+          </div>
+
+
+
+          <div class = "rowbuttons"  *ngIf="singleOrder && total === '0.00'" >
+            <button class="grey button" mat-flat-button > Jetzt kaufen</button>
+          </div>
+          <div class = "rowbuttons" *ngIf="singleOrder && total !== '0.00'" >
+            <button  class="save button" mat-flat-button color="accent" (click)="buy()"> Jetzt kaufen</button>
+          </div>
+
+
+          <div class = "rowbuttons" *ngIf="!singleOrder && total === '0.00'" >
+            <button  class="grey button width" mat-flat-button> Zum Warenkorb hinzufügen</button>
+          </div>
+          <div class = "rowbuttons" *ngIf="!singleOrder && total !== '0.00'">
+            <button   class="save button width" mat-flat-button color="accent" (click)="shoppingCart()">  Zum Warenkorb hinzufügen</button>
+          </div>
+
+
+
+      </div>
+  </div>

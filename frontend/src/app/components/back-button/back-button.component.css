@@ -1,0 +1,10 @@
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+
+    transform: scale(1.2);
+}
+.down{
+  padding-bottom:50px; /*So that button has its own header*/
+}

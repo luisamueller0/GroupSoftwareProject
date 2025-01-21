@@ -1,0 +1,45 @@
+<div class="popup" id="popup1" [ngClass]="{'transitionZwei': isBewertenVisible}">
+
+
+    <div>
+      <h3 class = "title"> {{title}} </h3>
+      <p class="startDate"> {{dateText}}</p>
+     </div>
+
+    <div class="flexcontainer2">
+        <input type="radio" name="star" id="rate-5" class="showStarsMargin" ><label class="gold" (click)="changeFunction(0)" for="rate-5">{{stars[0]}}</label>
+        <input type="radio" name="star" id="rate-4" class="showStars" ><label class="gold" (click)="changeFunction(1)" for="rate-4">{{stars[1]}}</label>
+        <input type="radio" name="star" id="rate-3" class="showStars" ><label class="gold" (click)="changeFunction(2)" for="rate-3">{{stars[2]}}</label>
+        <input type="radio" name="star" id="rate-2" class="showStars" ><label class="gold" (click)="changeFunction(3)" for="rate-2">{{stars[3]}}</label>
+        <input type="radio" name="star" id="rate-1" class="showStars" ><label class="gold" (click)="changeFunction(4)" for="rate-1">{{stars[4]}}</label>
+
+
+
+        <div class= "Input">
+        <label class = "text">
+          <input id="anonCheckbox" type="checkbox" [checked]="stayAnonym" (click)="toggleCheckBox()">
+          Anonym bewerten
+        </label>
+      </div>
+    </div>
+    <div class="warning" *ngIf="warning">
+        <span>Sie müssen mind. 1 Stern vergeben</span>
+    </div>
+    <div>
+        <textarea class="review-input" rows="7" placeholder="Ihre Bewertung ..." maxlength="300" [(ngModel)]="reviewText" (ngModelChange)="onInputChange()"></textarea>
+        <p class="remaningChars">{{remainingText}}</p>
+        <div class="tooManySigns" *ngIf="tooManySigns">
+                <span>max. Anzahl an Zeichen erreicht</span>
+        </div>
+    </div>
+    <div class = "rowbuttons">
+      <button class="cancel" mat-flat-button  (click)="abbrechen()">Abbrechen</button>
+      <button class="save" mat-flat-button color="accent" (click)="absenden()">Absenden</button>
+    </div>
+
+
+
+</div>
+<div class="success" *ngIf="reviewSuccess" [ngClass]="{ 'hidden': !reviewSuccess }">
+<span class="thanking">Vielen Dank für ihre Bewertung</span>
+</div>

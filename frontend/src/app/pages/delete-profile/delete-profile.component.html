@@ -1,0 +1,107 @@
+<div class="page-container">
+
+  <app-back-button></app-back-button>
+
+  <div class="scrollable-container">
+
+    <h2 class="backbtn">Profil löschen</h2>
+
+    <!--HTML for entering the password to confirm the deletion.-->
+    <div class="container" *ngIf="!showTickets && !showQuestion">
+
+      <p class = "head">Bitte geben Sie zum Bestätigen des Löschvorgangs Ihr Passwort ein:</p>
+
+      <div class = "inputBox">
+        <app-user-input
+          (enterKeyPressed)="enter()"
+          [invalid]="!bool"
+          label="Passwort"
+          type="password"
+          [(text)] = "password">
+        </app-user-input>
+      </div>
+
+      <div class="buttons">
+        <button  class="button enter"
+        mat-flat-button
+        color="primary"
+        (click)="checkInput()">
+        Bestätigen
+        </button>
+      </div>
+
+      <div class ="errormsg" >
+        {{errorMessage}}
+      </div>
+  </div>
+
+
+
+  <div class="question" *ngIf="showQuestion">
+    <h2 class = "backbtn"> Achtung!</h2>
+
+    <p class = "center text">
+      Sind Sie sich sicher, dass Sie Ihr Profil löschen wollen?
+    </p>
+
+    <div class="rowbuttons">
+
+      <button class="enter button"
+      mat-flat-button
+      color="primary"
+      (click)="cancel()">
+      Abbrechen
+      </button>
+
+      <button class="delete button"
+      mat-flat-button
+      (click)="delete()">
+      Löschen
+      </button>
+
+    </div>
+
+  </div>
+
+
+<!--HTML for displaying the tickets of upcoming events that the user can still download..-->
+    <div *ngIf="showTickets">
+
+        <h2 class = "backbtn"> Offene Tickets</h2>
+
+        <p class = "text">
+          Hier haben Sie noch die Möglichkeit Ihre Tickets für
+          kommende Events herunterzuladen. Ansonsten werden ihre Daten,
+          inklusive der Tickets, mit dem Profil gelöscht. Sie haben nach dem Löschen ihres Profils
+          keine Möglichkeit Ihre Tickets wiederherzustellen. Die heruntergeladenen Tickets verlieren jedoch nicht ihre Gültigkeit.
+        </p>
+
+        <p class = "title text">
+          Ihre Tickets:
+        </p>
+
+        <div  *ngFor="let item of allTickets">
+          <app-single-ticket [tickets] = 'item'></app-single-ticket>
+        </div>
+
+        <p class = "text ok">
+          Drücken Sie OK, wenn Sie mit den Löschvorgang fortführen wollen.
+        </p>
+
+      <div class="buttons">
+
+        <button class="enter button okbutton"
+        mat-flat-button
+        color="primary"
+        (click) = "button()">
+        OK
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

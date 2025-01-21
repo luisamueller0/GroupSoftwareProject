@@ -1,0 +1,8 @@
+<div class="bottom-bar">
+    <div *ngFor="let entry of entries" class="entry">
+        <div class="active-indicator" *ngIf="entry.isActive"></div>
+        <a [routerLink]="entry.url">
+            <mat-icon [fontIcon]="entry.icon" class="icon"></mat-icon>
+        </a>
+    </div>
+</div>
