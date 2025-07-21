@@ -84,7 +84,9 @@ export class DetailsComponent implements OnInit{
         this.hasStudentPrice = !(!this.event.price_student);
 
         this.sameDate = event.start_date === event.end_date;
-        this.isOver = event.is_past;
+        this.isOver = false;
+
+        //this.isOver = event.is_past;
 
         // Add Marker to map
         const lat = this.event.eventLocation.coordinates_lat;

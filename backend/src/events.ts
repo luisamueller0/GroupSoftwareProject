@@ -6,9 +6,11 @@ export class EventController{
 
     public async getEvents(request: Request, response: Response) : Promise<void>{
         const events = await this.db.getEventsWithLoc();
+        console.log('✅ HIT /api/events');
         if(!events){
             response.status(404); //ressource not found
             response.send({code: 404, message: 'Event with Location not found!'});
+            return;
         }
 
         response.status(200);
@@ -24,6 +26,7 @@ export class EventController{
         if(!events){
             response.status(404); //ressource not found
             response.send({code: 404, message: 'Event with Location not found!'});
+              return;
         }
         response.status(200);
         response.send(events);
@@ -33,6 +36,7 @@ export class EventController{
         if(!events){
             response.status(404);
             response.send({code: 404, message: 'Past events not found'});
+              return;
         }
         response.status(200);
         response.send(events);

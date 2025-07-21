@@ -30,7 +30,7 @@ import { SWPSafeService } from './payment-services/swpSafe';
 const app = express();
 
 // Express Konfiguration
-app.set('port', 80);
+app.set('port', 3000);
 
 // "JSON" Daten verarbeiten falls der Request zusätzliche Daten im Request hat
 app.use(express.json());

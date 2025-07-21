@@ -32,6 +32,7 @@ export class LoginService {
       },
       error: (err) => {
         this.loggedIn = false;
+        console.log('hallo');
         console.error(err);
       }
     });

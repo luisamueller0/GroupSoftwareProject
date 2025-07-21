@@ -7,7 +7,7 @@ export class EventManager {
 
     private db = Database.getInstance();
     public async getEventsWithLoc() : Promise<Event[]>{
-        const today = new Date();
+const today = new Date('2023-01-01');
         try{
             const events = await this.db.Events.findAll({ //Select all from Events and Coordinates from Location FROM Events Join Locations on  Events.location = Locations.name WHERE end_date >= today 
             include: {model: this.db.Locations ,as: 'eventLocation', attributes: ['coordinates_lat','coordinates_lng']},

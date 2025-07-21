@@ -75,6 +75,8 @@ export class ApiController {
     response.send('ok');
   }
   public getLuisaMuellerInfo(request: Request, response: Response): void {
+      console.log('✅ HIT /api/luisa-mueller');
+
     response.status(200);
     response.send({
       firstName: 'Luisa',
