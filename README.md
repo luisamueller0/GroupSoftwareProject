@@ -35,8 +35,8 @@ Overview of the final app showcasing its core features and user interface (_orig
 
 ### Supervisors
 
-- **Product Owner:** Yasin Yagdi | [E-Mail](mailto:yasin.yagdi@uni-konstanz.de) | [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@yasin)
-- **"Client":** Maximilian Dürr | [E-Mail](mailto:maximilian.duerr@uni-konstanz.de) | [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@mduerr)
+- **Product Owner:** Yasin Yagdi 
+- **"Client":** Maximilian Dürr 
 
 ## Resources
 
