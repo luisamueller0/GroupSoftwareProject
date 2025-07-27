@@ -1,18 +1,30 @@
 # Software Project 2023 at the University of Konstanz (Group 09)
 
-## 📱 Screenshots of final developed App
+## Visual Overview of developed App
+_App was developed in German_
 
-### 🧑‍💻 Login
-![Login Screenshot](link-zum-bild)
+Login: [<img src="https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846" width="200"/>](https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846)
 
-### 📝 Registration
-![Registration Screenshot](link-zum-bild)
 
-### 🎟️ Ticket Purchase
-![Ticket Screenshot](link-zum-bild)
+| Login | Registration |  Map (Start Page) |
+|-------|-----|-------|
+| [<img src="https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846" height="400"/>](https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846) | [<img src="https://github.com/user-attachments/assets/d7c7801f-cdf3-4a9c-b2a9-a933778670f2" height="400"/>](https://github.com/user-attachments/assets/d7c7801f-cdf3-4a9c-b2a9-a933778670f2) | [<img src="https://github.com/user-attachments/assets/823deb99-0df1-47c5-acfe-bbb61640de53" height="400"/>](https://github.com/user-attachments/assets/823deb99-0df1-47c5-acfe-bbb61640de53) [<img src="https://github.com/user-attachments/assets/4274017e-6862-40d3-8004-70e661ca494c" height="400"/>](https://github.com/user-attachments/assets/4274017e-6862-40d3-8004-70e661ca494c)|
 
-➡️ See full [App Walkthrough with Screenshots](docs/screenshots.md)
+| List of Events | Filter & Search for Events|  Event Details Page |
+|-------|-----|-------|
+| [<img src="https://github.com/user-attachments/assets/3560e6f4-7398-4239-bd1e-a5c81218e43c" height="400"/>](https://github.com/user-attachments/assets/3560e6f4-7398-4239-bd1e-a5c81218e43c) |  [<img src="https://github.com/user-attachments/assets/fd5959f2-d16f-4a02-9b11-fa756d67f984" height="400"/>](https://github.com/user-attachments/assets/fd5959f2-d16f-4a02-9b11-fa756d67f984) | [<img src="https://github.com/user-attachments/assets/f97f8f6a-383d-4882-89b0-e110c50a52b7" height="400"/>](https://github.com/user-attachments/assets/f97f8f6a-383d-4882-89b0-e110c50a52b7) [<img src="https://github.com/user-attachments/assets/be703b5e-36fd-403c-81ef-3daebf8c1fa8" height="400"/>](https://github.com/user-attachments/assets/be703b5e-36fd-403c-81ef-3daebf8c1fa8) |
 
+| Ticket Purchase |
+|---------------------|
+| [<img src="https://github.com/user-attachments/assets/1da30a0d-1515-4912-a1bd-10a0b19dbc30" height="400"/>](https://github.com/user-attachments/assets/1da30a0d-1515-4912-a1bd-10a0b19dbc30) [<img src="https://github.com/user-attachments/assets/60ac53aa-0e11-4c8b-a5be-5946440281fb" height="400"/>](https://github.com/user-attachments/assets/60ac53aa-0e11-4c8b-a5be-5946440281fb) [<img src="https://github.com/user-attachments/assets/6bdb4cb5-4db1-4313-9ccc-b38436610c9a" height="400"/>](https://github.com/user-attachments/assets/6bdb4cb5-4db1-4313-9ccc-b38436610c9a) [<img src="https://github.com/user-attachments/assets/ae242fb6-9f59-4380-88b1-e898561436fb" height="400"/>](https://github.com/user-attachments/assets/ae242fb6-9f59-4380-88b1-e898561436fb) |
+
+| Reviews |  Profile |
+|-------|------------|
+|  [<img src="https://github.com/user-attachments/assets/44512a1a-8c54-428a-af4c-dc7ea6a1e36c" width="200"/>](https://github.com/user-attachments/assets/44512a1a-8c54-428a-af4c-dc7ea6a1e36c) [<img src="https://github.com/user-attachments/assets/ffdabb83-1a9b-4664-bb09-9b65b5ba45b2" width="200"/>](https://github.com/user-attachments/assets/ffdabb83-1a9b-4664-bb09-9b65b5ba45b2)   | [<img src="https://github.com/user-attachments/assets/a9077bc8-5e66-4d40-b206-e065dec536d5" width="200"/>](https://github.com/user-attachments/assets/a9077bc8-5e66-4d40-b206-e065dec536d5)|
+
+| My Orders|   Refund an Order |
+|-------|------------|
+| [<img src="https://github.com/user-attachments/assets/0db1fe91-34c4-4410-bc20-119b82046a44" width="200"/>](https://github.com/user-attachments/assets/0db1fe91-34c4-4410-bc20-119b82046a44) [<img src="https://github.com/user-attachments/assets/d67aa0d3-e8c6-46a6-b943-c50728828d94" width="200"/>](https://github.com/user-attachments/assets/d67aa0d3-e8c6-46a6-b943-c50728828d94)  |  [<img src="https://github.com/user-attachments/assets/ef190a19-a247-4e69-9610-a9ea43f66a55" width="200"/>](https://github.com/user-attachments/assets/ef190a19-a247-4e69-9610-a9ea43f66a55) [<img src="https://github.com/user-attachments/assets/1402c0f0-c018-49b3-9036-9ffbac2484a4" width="200"/>](https://github.com/user-attachments/assets/1402c0f0-c018-49b3-9036-9ffbac2484a4)  |
 
 ## Team
 ### Team members
