@@ -1,23 +1,21 @@
 # Software-Projekt 2023 Gruppe 09
 
 ## Team
-### Gruppenmitglieder
+### Team members
 
-- [Jürgen Geiselhart](mailto:juergen.geiselhart@uni-konstanz.de): Scrum Master (sollte nach jedem Sprint wechseln)
+- [Jürgen Geiselhart](mailto:juergen.geiselhart@uni-konstanz.de)
 - [Adrian Sopio](mailto:adrian.sopio@uni-konstanz.de)
 - [Luisa Müller](mailto:luisa.mueller@uni-konstanz.de)
 - [Tim Bleile](mailto:tim.bleile@uni-konstanz.de)
 - [Patrick Störk](mailto:patrick.stoerk@uni-konstanz.de)
 - [Max Galetskiy](mailto:max.galetskiy@uni-konstanz.de)
 
-### Betreuer
+### Supervisors
 
 - **Product Owner:** Yasin Yagdi | [E-Mail](mailto:yasin.yagdi@uni-konstanz.de) | [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@yasin)
-- **Kunde:** Maximilian Dürr | [E-Mail](mailto:maximilian.duerr@uni-konstanz.de) | [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@mduerr)
-- Bei technischen Fragen / Problemen bitte Cedric Wiese ([Mail](mailto:cedric.wiese@uni-konstanz.de) / [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@cedricw)) kontaktieren
+- **"Client":** Maximilian Dürr | [E-Mail](mailto:maximilian.duerr@uni-konstanz.de) | [Mattermost](https://hci2.uni-konstanz.de/mattermost/softwareprojekt-2023/messages/@mduerr)
 
-## Resourcen
-**Bitte auch die Resourcen im [Software Projekt Wiki](https://gitlab.inf.uni-konstanz.de/ag-hci/lectures/2023-software-projekt/swp-2023-beispiele/-/wikis/home) sowie die Abgaben im [Projekt Wiki](/%2E%2E/wikis/Home) beachten!**
+## Resources
 
 - [User Stories](https://miro.com/app/board/uXjVMTSnwrE=/?share_link_id=531699021183)
 - [Figma UX Design 1: Grundgerüst, Karte & Events](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1601%3A11846&t=fNdGTCWIrspByy4f-1)
