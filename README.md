@@ -52,7 +52,7 @@ Overview of the final app showcasing its core features and user interface (_orig
 ### Frontend
 
 - [Angular](https://angular.io/docs)
-- [Material Design Komponenten](https://material.angular.io/)
+- [Material Design Components](https://material.angular.io/)
 - [Leaflet (OpenStreetMap Plugin)](https://github.com/bluehalo/ngx-leaflet)
 
 ### Backend
