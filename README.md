@@ -17,10 +17,12 @@
 
 ## Resources
 
-- [User Stories](https://miro.com/app/board/uXjVMTSnwrE=/?share_link_id=531699021183)
-- [Figma UX Design 1: Grundgerüst, Karte & Events](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1601%3A11846&t=fNdGTCWIrspByy4f-1)
-- [Figma UX Design 2: Verbesserungen (Vorschläge)](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1702%3A14268&t=fNdGTCWIrspByy4f-1)
-- [Fragebogen: Kurs Fragen & Feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=nrCdnbiKjkq3bYTgeNkt5hCpVgfjpG5Bg3bKMcZW6A5UMFc2MjZaVUNOWTNPVU5UWUpSRlM2UEJFQS4u)
+- Official Miro board for the user stories used in the development of this app (originally written in German): [User Stories](https://miro.com/app/board/uXjVMTSnwrE=/?share_link_id=531699021183). <br> An English summary can be provided upon request.
+- Design references from our supervisors used during app development:
+  - [Figma UX Design 1: Basic Structure, Map & Events](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1601%3A11846&t=fNdGTCWIrspByy4f-1)
+  - [Figma UX Design 2: Improvements (Suggestions)](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1702%3A14268&t=fNdGTCWIrspByy4f-1)
+
+
 
 ## Techstack
 
