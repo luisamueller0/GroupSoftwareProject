@@ -1,5 +1,19 @@
 # Software Project 2023 at the University of Konstanz (Group 09)
 
+## 📱 Screenshots of final developed App
+
+### 🧑‍💻 Login
+![Login Screenshot](link-zum-bild)
+
+### 📝 Registration
+![Registration Screenshot](link-zum-bild)
+
+### 🎟️ Ticket Purchase
+![Ticket Screenshot](link-zum-bild)
+
+➡️ See full [App Walkthrough with Screenshots](docs/screenshots.md)
+
+
 ## Team
 ### Team members
 
