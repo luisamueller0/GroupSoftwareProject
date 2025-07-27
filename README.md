@@ -1,10 +1,7 @@
 # Software Project 2023 at the University of Konstanz (Group 09)
 
-## Visual Overview of developed App
-_App was developed in German_
-
-Login: [<img src="https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846" width="200"/>](https://github.com/user-attachments/assets/9df1a71b-3ab9-4aed-8b5a-b68aa4cb2846)
-
+## App Walkthrough
+Overview of the final app showcasing its core features and user interface (_originally developed in German_)
 
 | Login | Registration |  Map (Start Page) |
 |-------|-----|-------|
