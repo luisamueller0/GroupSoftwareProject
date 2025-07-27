@@ -1,4 +1,4 @@
-# Software-Projekt 2023 Gruppe 09
+# Software Project 2023 at the University of Konstanz (Group 09)
 
 ## Team
 ### Team members
