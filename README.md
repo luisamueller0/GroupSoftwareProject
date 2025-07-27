@@ -26,12 +26,12 @@ Overview of the final app showcasing its core features and user interface (_orig
 ## Team
 ### Team members
 
-- [Jürgen Geiselhart](mailto:juergen.geiselhart@uni-konstanz.de)
-- [Adrian Sopio](mailto:adrian.sopio@uni-konstanz.de)
-- [Luisa Müller](mailto:luisa.mueller@uni-konstanz.de)
-- [Tim Bleile](mailto:tim.bleile@uni-konstanz.de)
-- [Patrick Störk](mailto:patrick.stoerk@uni-konstanz.de)
-- [Max Galetskiy](mailto:max.galetskiy@uni-konstanz.de)
+- Luisa Müller
+- Jürgen Geiselhart
+- Adrian Sopio
+- Tim Bleile
+- Patrick Störk
+- Max Galetskiy
 
 ### Supervisors
 
