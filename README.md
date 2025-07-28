@@ -48,7 +48,8 @@ Overview of the final app showcasing its core features and user interface (_orig
 - Design references from our supervisors used during app development:
   - [Figma UX Design 1: Basic Structure, Map & Events](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1601%3A11846&t=fNdGTCWIrspByy4f-1)
   - [Figma UX Design 2: Improvements (Suggestions)](https://www.figma.com/file/SQ1688ZHqC4IsdGldkqmwY/SWP_Prototype_SoSe_2023?node-id=1702%3A14268&t=fNdGTCWIrspByy4f-1)
-
+ 
+**Further documentation, setup instructions, and evaluations can be found in the [Wiki](../../wiki).**
 
 
 ## Techstack
@@ -63,9 +64,6 @@ Overview of the final app showcasing its core features and user interface (_orig
 
 - [Express](https://expressjs.com/)
 - [Sequelize](https://sequelize.org/)
-
-📚 **Further documentation, setup instructions, and evaluations can be found in the [Wiki](../../wiki).**
-
 
 ## 📅 Project Timeline Overview (Key Sprints & Events)
 
