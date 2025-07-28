@@ -1,4 +1,8 @@
 # Software Project 2023 at the University of Konstanz (Group 09)
+> "Island-Explorer" is a German-language mobile website developed by a six-member student team during the Software Project course at the University of Konstanz in Summer 2023. Designed as a digital guide for visitors of the public park *Insel Mainau*, the app helps users explore events, purchase tickets, and manage visits.
+>
+> While technically a website, it was built to be displayed in a mobile phone layout for an optimized on-the-go experience.
+
 
 ## App Walkthrough
 Overview of the final app showcasing its core features and user interface (_originally developed in German_)
